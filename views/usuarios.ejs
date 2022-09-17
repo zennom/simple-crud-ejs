@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Lista de usuários do banco</h1>
+    <ul>
+      <% users.forEach(user => { %>
+        <li>
+          <%= user.nome %> <a href="/editar/<%= user.id_usuario %>">Editar</a> - <a href="">Excluir</a>
+        </li>
+      <% }) %> 
+    </ul>
+  </body>
+</html>
