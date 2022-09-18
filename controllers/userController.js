@@ -29,7 +29,6 @@ const userController = {
         //recebendo o id, nome email e senha
         const {id} = req.params
         const {nome,email,senha} = req.body
-
         //armazenando dentro da variavel resultado
         const resultado = await Usuario.update({
             nome,
@@ -43,7 +42,7 @@ const userController = {
                 id_usuario:id
             }
         })
-
+        //após atualizar, seremos redirecionados para página /usuarios
         return res.redirect('/usuarios')
     }
 }
