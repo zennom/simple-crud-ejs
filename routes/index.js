@@ -8,7 +8,8 @@ router.get('/usuarios',userController.index)
 router.get('/cadastro',userController.create)
 router.post('/cadastro',userController.store)
 
-//editado usuário
-router.put('/editar/:id',userController.update)
+
+router.get('/editar/:id',userController.edit)
+router.post('/editar/:id',userController.update)
 
 module.exports = router;

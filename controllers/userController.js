@@ -1,4 +1,5 @@
 const {Usuario} = require('../models')
+const Sequelize = require('sequelize')
 
 const userController = {
     index: async(req,res) =>{
@@ -18,8 +19,14 @@ const userController = {
         })
         return res.redirect('/usuarios')
     },
+    edit:async(req,res) =>{
+        const {id} = req.params
+        const usuario = await Usuario.findByPk(id)
+
+        return res.render('editarUsuario',{usuario})
+    },
     update:async(req,res) =>{
-        //recendo o id, nome email e senha
+        //recebendo o id, nome email e senha
         const {id} = req.params
         const {nome,email,senha} = req.body
 
