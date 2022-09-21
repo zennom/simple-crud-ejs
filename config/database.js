@@ -1,11 +1,10 @@
-//agora vamos fazer a configuração
-//do  banco aqui no nosso código
+
 const config = {
     username: 'root',
     password: '',
-    database: 'teste', //nome do banco que criamos
+    database: 'cadastro', 
     host: 'localhost',
-    dialect: 'mysql' //qual banco estamos usando
+    dialect: 'mysql' 
 }
 
 module.exports = config

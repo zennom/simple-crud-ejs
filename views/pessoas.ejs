@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <h1>Lista de usuários do banco</h1>
+
+    <table border="1" width="100%">
+      <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>CURSO PREFERIDO</th>
+      </tr>
+      <% pessoas.forEach(pessoa => { %>
+      <tr>
+          <td> <%= pessoa.id %></td>
+          <td> <%= pessoa.nome %> </td>
+          <td> <%= pessoa.cursopreferido %> </td>
+          <% }) %> 
+      </tr>
+    </table>
+  
+  </body>
+</html>
